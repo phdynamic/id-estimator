@@ -3,7 +3,8 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>ID Project Estimator</title>
+    <link rel="icon" type="image/svg+xml" href="/id-estimator/favicon.svg" />
+    <title>Esti-mate</title>
     <style>
       #auth-gate {
         position: fixed;
@@ -23,9 +24,22 @@
         width: 100%;
         max-width: 340px;
       }
+      #auth-gate .brand {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        margin-bottom: 16px;
+      }
+      #auth-gate .brand svg {
+        width: 36px;
+        height: 36px;
+        flex: 0 0 36px;
+      }
       #auth-gate h1 {
-        margin: 0 0 4px;
-        font-size: 18px;
+        margin: 0;
+        font-size: 20px;
+        font-weight: 700;
+        letter-spacing: -0.01em;
         color: #0f172a;
       }
       #auth-gate p {
@@ -108,7 +122,14 @@
             gate.id = "auth-gate";
             gate.innerHTML =
               '<form class="card" id="auth-form">' +
-              "<h1>ID Project Estimator</h1>" +
+              '<div class="brand">' +
+              '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" aria-hidden="true">' +
+              '<rect width="48" height="48" rx="10" fill="#7e14ff"/>' +
+              '<rect x="12" y="18" width="24" height="4" rx="2" fill="#ffffff"/>' +
+              '<rect x="12" y="26" width="24" height="4" rx="2" fill="#ffffff"/>' +
+              "</svg>" +
+              "<h1>Esti-mate</h1>" +
+              "</div>" +
               "<p>Please sign in to continue.</p>" +
               '<label for="auth-user">Username</label>' +
               '<input id="auth-user" type="text" autocomplete="username" autofocus />' +
